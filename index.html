@@ -17,15 +17,15 @@
 <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <a class="header-logo" href="#">
+        <div class="container header-wrap">
+            <a class=" header-logo" href="#">
                 <p class="header-logo-txt"><span class="header-logo-accent">SIMPLY</span> CHOCOLATE</p>
                 <svg class="header-logo-icon" width="24" height="24">
                     <use href="./img/icons/icons.svg#icon-chocolate"></use>
                 </svg>
             </a>
-            <button>
-                <svg class="header-logo-icon" width="24" height="24">
+            <button class="header-menu-btn">
+                <svg class="header-menu-icon" width="24" height="24">
                     <use href="./img/icons/icons.svg#icon-menu-burger"></use>
                 </svg>
             </button>
@@ -45,14 +45,14 @@
             <ul class="header-social-list">
                 <li>
                     <a href="#">
-                        <svg class="header-logo-icon" width="24" height="24">
+                        <svg class="header-social-icon" width="24" height="24">
                             <use href="./img/icons/icons.svg#icon-instagram"></use>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <svg class="header-logo-icon" width="24" height="24">
+                        <svg class="header-social-icon" width="24" height="24">
                             <use href="./img/icons/icons.svg#icon-twitter"></use>
                         </svg>
                     </a>
@@ -67,21 +67,25 @@
         <!-- HERO -->
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Treat yourself or a loved one to
-                    our finest ingredients for a moment
-                    of pure delight!
-                </h1>
-                <div class="hero-controls">
-                    <button class="general-btn hero-controls-btn" type="button">Buy now</button>
-                    <a class="general-btn hero-controls-link" href="#how">How it’s made</a>
-                    <button class="hero-controls-scroll" type="button">
-                        scroll down
-                        <span class="hero-controls-circle">
-                            <svg class="hero-controls-icon" width="22" height="22">
-                                <use href="./img/icons.svg#icon-angle"></use>
-                            </svg>
-                        </span>
-                    </button>
+                <div class="hero-wrap">
+                    <h1 class="hero-title">Treat yourself or a loved one to
+                        our finest ingredients for a moment
+                        of pure delight!
+                    </h1>
+                    <div class="hero-controls">
+                        <div class="hero-btn-wrap">
+                            <button class="hero-controls-btn" type="button">Buy now</button>
+                            <a class="hero-controls-link" href="#how">How it’s made</a>
+                        </div>
+                        <button class="hero-controls-scroll" type="button">
+                            scroll down
+                            <span class="hero-controls-circle">
+                                <svg class="hero-controls-icon" width="22" height="22">
+                                    <use href="./img/icons/icons.svg#icon-angle"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -232,7 +236,7 @@
                             creaminess inside. The wafer is soft but crunchy.</p>
                     </li>
                 </ul>
-                <button class="general-btn">Leave a review</button>
+                <button class="reviews-btn">Leave a review</button>
             </div>
         </section>
     </main>
@@ -262,7 +266,7 @@
                     <label class="footer-form-label" for="">
                         <input class="footer-form-field" type="text">
                     </label>
-                    <buttom class="general-btn">Subscribe</buttom>
+                    <buttom class="footer-form-btn">Subscribe</buttom>
                 </form>
             </div>
         </div>
