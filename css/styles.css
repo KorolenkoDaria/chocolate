@@ -3,24 +3,24 @@
   --mainBgColor: #fafafa;
   --secondBgColor: #1e1823;
   --accentColor: #fd9222;
+  --greyColor: rgba(255, 255, 255, 0.7);
+  --witeColor: #ffffff;
 }
 body {
   font-family: Montserrat, sans-serif;
   color: #111111;
   background-color: var(--mainBgColor);
-}
-button {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 14px;
-  background-color: var(--accentColor);
-}
-p {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.11;
   letter-spacing: -0.02em;
 }
+button {
+  color: var(--witeColor);
+  font-weight: 600;
+  font-size: 14px;
+  background-color: var(--accentColor);
+}
+
 .title {
   font-weight: 600;
   font-size: 24px;
@@ -101,12 +101,12 @@ address {
   background-color: teal;
 }
 .hero:hover .hero-text {
-  color: white;
+  color: var(--witeColor);
 }
 .hero_title {
 }
 .hero_text {
-  color: #ffffff;
+  color: var(--witeColor);
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -123,8 +123,7 @@ address {
 
 /* BENEFITES */
 .benefites {
-  color: #ffffff;
-  background-color: #1e1823;
+  background-color: var(--secondBgColor);
 }
 .benefites_list {
 }
@@ -133,12 +132,14 @@ address {
 .benefites_img {
 }
 .benefites_title {
+  color: var(--witeColor);
   font-weight: 600;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.02em;
 }
 .benefites_text {
+  color: var(--greyColor);
 }
 
 /* INGRIDIENTS */
@@ -178,7 +179,8 @@ address {
 .made_list {
 }
 .made_item {
-  font-weight: 400;
+}
+.made_item_text {
   font-size: 14px;
   line-height: 1.11;
   letter-spacing: -0.02em;
