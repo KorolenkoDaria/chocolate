@@ -59,9 +59,22 @@ button {
 address {
   font-style: normal;
 }
+.section {
+  outline: 2px solid red;
+  /*   padding-top: 50px;
+  padding-bottom: 50px; */
+}
+.container {
+  width: 1168px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 /* HEADER */
 
 .header {
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 .header_nav {
 }
@@ -95,6 +108,10 @@ address {
 
 /* HERO */
 .hero {
+  margin-bottom: 72px;
+}
+.hero_bg {
+  padding: 381px 40px 40px 40px;
   background-color: var(--secondBgColor);
 }
 .hero:hover {
@@ -106,6 +123,7 @@ address {
 .hero_title {
 }
 .hero_text {
+  width: 484px;
   color: var(--witeColor);
   font-weight: 500;
   font-size: 28px;
@@ -124,6 +142,9 @@ address {
 /* BENEFITES */
 .benefites {
   background-color: var(--secondBgColor);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /*   margin-bottom: 100px; */
 }
 .benefites_list {
 }
@@ -142,20 +163,32 @@ address {
   color: var(--greyColor);
 }
 
-/* INGRIDIENTS */
-.ingridients {
+/* INGREDIENTS */
+.ingredients {
+  background-color: lightgrey;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
-.ingridients_title {
+.ingredients_title {
+  text-align: center;
+  width: 411px;
+  margin-bottom: 28px;
+  margin: 0 auto 28px;
 }
-.ingridients_text {
+.ingredients_text {
+  text-align: center;
+  margin: 0 auto;
+  width: 486px;
 }
-.ingridients_list {
+.ingredients_list {
 }
-.ingridients_item {
+.ingredients_item {
+  width: 270px;
+  padding: 28px;
 }
-.ingridients_item_img {
+.ingredients_item_img {
 }
-.ingridients_item_title {
+.ingredients_item_title {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
