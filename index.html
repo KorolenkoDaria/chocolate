@@ -23,10 +23,12 @@
 <body>
     <!--header-->
     <header class="header">
-        <div class="container">
+        <div class="container header_container">
             <nav class="header_nav">
-                <a class="header_logo" href="./index.html"><span class="header_logo_italic">SIMPLY</span> CHOCOLATE</a>
-                <img class="header_icon" src="./images/header/logo.svg" alt="">
+                <a class="header_logo" href="./index.html"><span class="header_logo_italic">SIMPLY</span> CHOCOLATE <img
+                        class="header_icon" src="./images/header/logo.svg" alt="logo chocolate" width="24"
+                        height="24"></a>
+
                 <ul class="header_nav_list">
                     <li class="header_nav_item"><a class="header_nav_link" href="./index.html">Home</a></li>
                     <li class="header_nav_item"><a class="header_nav_link" href="#how">How it’s made?</a></li>
@@ -63,8 +65,10 @@
             <div class="container">
                 <ul class="benefites_list">
                     <li class="benefites_item">
-                        <img class="benefites_img" src="./images/benefites/icon_1.svg" alt="the icon of chocolate"
-                            width="32" height="32">
+                        <div class="benefites_img_wrapper">
+                            <img class="benefites_img" src="./images/benefites/icon_1.svg" alt="the icon of chocolate"
+                                width="32" height="32">
+                        </div>
                         <h3 class="benefites_title">Unsurpassed taste</h3>
                         <p class="benefites_text">Crafted with the finest quality cocoa beans and a dedication to
                             perfection, each
@@ -73,8 +77,10 @@
                             bliss.</p>
                     </li>
                     <li class="benefites_item">
-                        <img class="benefites_img" src="./images/benefites/icon_2.svg" alt="the icon of coin" width="32"
-                            height="32">
+                        <div class="benefites_img_wrapper">
+                            <img class="benefites_img" src="./images/benefites/icon_2.svg" alt="the icon of coin"
+                                width="32" height="32">
+                        </div>
                         <h3 class="benefites_title">Affordable price</h3>
                         <p class="benefites_text">Indulge in high-quality chocolate without breaking the bank with
                             Simply
@@ -83,8 +89,10 @@
                             selection and indulge in affordable luxury today.</p>
                     </li>
                     <li class="benefites_item">
-                        <img class="benefites_img" src="./images/benefites/icon_3.svg" alt="the icon of lodge"
-                            width="32" height="32">
+                        <div class="benefites_img_wrapper">
+                            <img class="benefites_img" src="./images/benefites/icon_3.svg" alt="the icon of lodge"
+                                width="32" height="32">
+                        </div>
                         <h3 class="benefites_title">Own production</h3>
                         <p class="benefites_text">We take pride in our own production process, ensuring that every step
                             is
@@ -94,6 +102,7 @@
                 </ul>
             </div>
         </section>
+
         <!--ingredients-->
         <section class="section ingredients">
             <div class="container">
@@ -134,34 +143,40 @@
         <section id="how" class="section made">
             <div class="container">
                 <h2 class="title made_title">how it’s <span class="title_span">made?</span></h2>
-                <img class="made_img" src="./images/made/made_dt_1x.jpg"
-                    alt="the picture of a pastry chef pouring chocolate" width="600" height="400">
-                <p class="made_text">Try our chocolates today and discover the perfect balance of flavor</p>
-                <ul class="made_list">
-                    <li class="made_item">
-                        <p class="made_item_text">Heat the milk in a saucepan without bringing it to a boil. Add sugar
-                            and
-                            cocoa powder.</p>
-                    </li>
-                    <li class="made_item">
-                        <p class="made_item_text">At the same time, prepare a water bath. Melt the butter on it.</p>
-                    </li>
-                    <li class="made_item">
-                        <p class="made_item_text">
-                            "Mix" the milk mixture and already liquid butter. Mix thoroughly with a
-                            silicone spatula so that the mass becomes uniform and silky.
-                        </p>
-                    </li>
-                    <li class="made_item">
-                        <p class="made_item_text">Heat the mixture over low heat, letting it barely boil.</p>
-                    </li>
-                    <li class="made_item">
-                        <p class="made_item_text">
-                            Pour the chocolate into special containers (can be replaced with ice molds).
-                            Allow to cool and harden.
-                        </p>
-                    </li>
-                </ul>
+                <div class="made_wrapper">
+                    <img class="made_img" src="./images/made/made_dt_1x.jpg"
+                        alt="the picture of a pastry chef pouring chocolate" width="600" height="400">
+                    <div class="made_text_wrapper">
+                        <p class="made_text">Try our chocolates today and discover the perfect balance of flavor</p>
+                        <ul class="made_list">
+                            <li class="made_item">
+                                <p class="made_item_text">Heat the milk in a saucepan without bringing it to a boil. Add
+                                    sugar
+                                    and
+                                    cocoa powder.</p>
+                            </li>
+                            <li class="made_item">
+                                <p class="made_item_text">At the same time, prepare a water bath. Melt the butter on it.
+                                </p>
+                            </li>
+                            <li class="made_item">
+                                <p class="made_item_text">
+                                    "Mix" the milk mixture and already liquid butter. Mix thoroughly with a
+                                    silicone spatula so that the mass becomes uniform and silky.
+                                </p>
+                            </li>
+                            <li class="made_item">
+                                <p class="made_item_text">Heat the mixture over low heat, letting it barely boil.</p>
+                            </li>
+                            <li class="made_item">
+                                <p class="made_item_text">
+                                    Pour the chocolate into special containers (can be replaced with ice molds).
+                                    Allow to cool and harden.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -204,27 +219,32 @@
     <!--footer-->
     <footer class="footer">
         <div class="container">
-            <p class="footer_text"><span class="footer_text_span">Chocolate</span> a delicious cure for a bad day</p>
-            <address class="footer_adress">
-                <p class="footer_adress_text" id="contact">Contact us</p>
-                <ul class="footer_adress_list">
-                    <li class="footer_adress_item">
-                        <a class="footer_adress_link" href="tel:+380684439426">+380 (68) 443-94-26</a>
-                    </li>
-                    <li class="footer_adress_item">
-                        <a class="footer_adress_link" href="mailto:simplychoc@gmail.com">simplychoc@gmail.com</a>
-                    </li>
+            <div class="footer_text_contact_wrapper">
+                <p class="footer_text"><span class="footer_text_span">Chocolate</span> a delicious cure for a bad day
+                </p>
+                <address class="footer_adress">
+                    <p class="footer_adress_text" id="contact">Contact us</p>
+                    <ul class="footer_adress_list">
+                        <li class="footer_adress_item">
+                            <a class="footer_adress_link" href="tel:+380684439426">+380 (68) 443-94-26</a>
+                        </li>
+                        <li class="footer_adress_item">
+                            <a class="footer_adress_link" href="mailto:simplychoc@gmail.com">simplychoc@gmail.com</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="footer_link_form_wrapper">
+                <ul class="footer_list">
+                    <li class="footer_item"><a class="footer_link" href="">Home</a></li>
+                    <li class="footer_item"><a class="footer_link" href="">How it’s made?</a></li>
+                    <li class="footer_item"><a class="footer_link" href="">Chocolate is loved</a></li>
                 </ul>
-            </address>
-            <ul class="footer_list">
-                <li class="footer_item"><a class="footer_link" href="">Home</a></li>
-                <li class="footer_item"><a class="footer_link" href="">How it’s made?</a></li>
-                <li class="footer_item"><a class="footer_link" href="">Chocolate is loved</a></li>
-            </ul>
-            <form class="footer_form">
-                <input class="footer_form_input" placeholder="Enter your email" type="text">
-                <button class="footer_form_btn">Subscribe</button>
-            </form>
+                <form class="footer_form">
+                    <input class="footer_form_input" placeholder="Enter your email" type="text">
+                    <button class="footer_form_btn">Subscribe</button>
+                </form>
+            </div>
         </div>
     </footer>
 </body>
