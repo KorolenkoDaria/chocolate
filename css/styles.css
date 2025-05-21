@@ -5,6 +5,7 @@
   --accentColor: #fd9222;
   --greyColor: rgba(255, 255, 255, 0.7);
   --witeColor: #ffffff;
+  --accenHoverColor: #fcf1e0;
 }
 body {
   font-family: Montserrat, sans-serif;
@@ -136,12 +137,7 @@ address {
   padding: 381px 40px 40px 40px;
   background-color: var(--secondBgColor);
 }
-.hero:hover {
-  background-color: teal;
-}
-.hero:hover .hero-text {
-  color: var(--witeColor);
-}
+
 .hero_title {
 }
 .hero_text {
@@ -157,8 +153,39 @@ address {
 .hero_item {
 }
 .hero_btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: var(--witeColor);
+  background-color: var(--accentColor);
+  font-weight: 600;
+}
+.hero_btn:hover {
+  background-color: var(--accenHoverColor);
+  color: var(--accentColor);
+}
+.hero_link {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: 1px solid var(--witeColor);
+  color: var(--witeColor);
+  font-weight: 600;
+}
+.hero_link:hover {
+  background-color: var(--witeColor);
+  color: var(--accentColor);
+  border-color: var(--accentColor);
 }
 .hero_scroll {
+  color: var(--witeColor);
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.hero_scroll:hover {
+  color: var(--accentColor);
 }
 
 /* BENEFITES */
@@ -172,11 +199,12 @@ address {
   width: 1100px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 88px;
+  align-items: start;
 }
 .benefites_item {
-  width: 308px;
+  width: calc((100% - 2 * 88px) / 3);
 }
 .benefites_img_wrapper {
   width: 62px;
@@ -220,14 +248,23 @@ address {
 }
 .ingredients_list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 19px;
   align-items: center;
 }
 .ingredients_item {
-  width: 270px;
+  width: calc((100% - 3 * 19px) / 4);
   padding: 28px;
   border: 1px solid var(--accentColor);
   border-radius: 15px;
+}
+.ingredients_item:nth-child(1) {
+  background-color: var(--accentColor);
+}
+.ingredients_item:nth-child(3n) {
+  background-color: var(--secondBgColor);
+  border-color: var(--secondBgColor);
+  color: var(--witeColor);
 }
 .ingredients_item_img {
   margin-bottom: 36px;
@@ -294,14 +331,15 @@ address {
 }
 .reviews_list {
   display: flex;
-  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 }
 .reviews_item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 360px;
+  width: calc((100% - 2 * 28px) / 3);
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 15px;
   padding: 24px;
