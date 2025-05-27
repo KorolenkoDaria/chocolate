@@ -1,5 +1,6 @@
 /* Common styles */
 :root {
+  --black: #111111;
   --mainBgColor: #fafafa;
   --secondBgColor: #1e1823;
   --accentColor: #fd9222;
@@ -19,7 +20,6 @@ button {
   color: var(--witeColor);
   font-weight: 600;
   font-size: 14px;
-  background-color: var(--accentColor);
 }
 
 .title {
@@ -38,7 +38,7 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a {
   text-decoration: none;
@@ -100,7 +100,7 @@ address {
   font-style: italic;
   margin-right: 4px;
 }
-.header_icon {
+.header_logo_icon {
   margin-left: 4px;
 }
 .header_nav_list {
@@ -126,7 +126,12 @@ address {
 }
 .header_social_item {
 }
-.header_social_img {
+.header_social_icon {
+  fill: none;
+  stroke: var(--black);
+}
+.header_social_icon:hover {
+  stroke: var(--accentColor);
 }
 
 /* HERO */
@@ -135,7 +140,13 @@ address {
 }
 .hero_bg {
   padding: 381px 40px 40px 40px;
+
   background-color: var(--secondBgColor);
+  background-image: url('../images/hero/hero_d_bg_1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
 }
 
 .hero_title {
@@ -147,8 +158,16 @@ address {
   font-size: 28px;
   line-height: 1.21;
   letter-spacing: -0.03em;
+  margin-bottom: 32px;
 }
-.hero_list {
+.hero_btn_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.hero_links_list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .hero_item {
 }
@@ -184,13 +203,35 @@ address {
   border-color: var(--accentColor);
 }
 .hero_scroll {
+  display: flex;
+  align-items: center;
   color: var(--witeColor);
   font-weight: 600;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: unset;
 }
 .hero_scroll:hover {
   color: var(--accentColor);
+}
+.hero_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 14px;
+  border-radius: 50%;
+  background-color: var(--witeColor);
+}
+.hero_scroll:hover .hero_circle {
+  background-color: var(--accentColor);
+}
+.hero_icon {
+  fill: var(--accentColor);
+}
+.hero_scroll:hover .hero_icon {
+  fill: var(--witeColor);
 }
 
 /* BENEFITES */
@@ -221,7 +262,7 @@ address {
   align-items: center;
   margin-bottom: 22px;
 }
-.benefites_img {
+.benefites_icon {
 }
 .benefites_title {
   color: var(--witeColor);
