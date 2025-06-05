@@ -7,6 +7,7 @@
   --greyColor: rgba(255, 255, 255, 0.7);
   --witeColor: #ffffff;
   --accenHoverColor: #fcf1e0;
+  --lightGreyColor: rgba(255, 255, 255, 0.5);
 }
 body {
   font-family: Montserrat, sans-serif;
@@ -38,8 +39,6 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition-property: color, background-color, border-color, fill, stroke;
-  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a {
   text-decoration: none;
@@ -62,9 +61,6 @@ address {
   font-style: normal;
 }
 .section {
-  /* outline: 2px solid red; */
-  /*   padding-top: 50px;
-  padding-bottom: 50px; */
 }
 .container {
   width: 1168px;
@@ -118,6 +114,7 @@ address {
   letter-spacing: -0.03em;
   padding-top: 24px;
   padding-bottom: 32px;
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header_nav_link:hover {
   color: var(--accentColor);
@@ -132,6 +129,7 @@ address {
 .header_social_icon {
   fill: none;
   stroke: var(--black);
+  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header_social_icon:hover {
   stroke: var(--accentColor);
@@ -185,6 +183,8 @@ address {
   color: var(--witeColor);
   background-color: var(--accentColor);
   font-weight: 600;
+  transition-property: color, background-color;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero_btn:hover {
   background-color: var(--accenHoverColor);
@@ -199,6 +199,8 @@ address {
   border: 1px solid var(--witeColor);
   color: var(--witeColor);
   font-weight: 600;
+  transition-property: color, background-color, border-color;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero_link:hover {
   background-color: var(--witeColor);
@@ -213,6 +215,7 @@ address {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: unset;
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero_scroll:hover {
   color: var(--accentColor);
@@ -226,12 +229,14 @@ address {
   margin-left: 14px;
   border-radius: 50%;
   background-color: var(--witeColor);
+  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero_scroll:hover .hero_circle {
   background-color: var(--accentColor);
 }
 .hero_icon {
   fill: var(--accentColor);
+  transition: fill 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero_scroll:hover .hero_icon {
   fill: var(--witeColor);
@@ -242,7 +247,6 @@ address {
   background-color: var(--secondBgColor);
   padding-top: 65px;
   padding-bottom: 50px;
-  /*   margin-bottom: 100px; */
 }
 .benefites_list {
   width: 1100px;
@@ -262,34 +266,25 @@ address {
   display: block;
   width: 62px;
   height: 62px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--lightGreyColor);
   border-radius: 50%;
   position: absolute;
   top: -15px;
-
-  /*    display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 22px; */
 }
 .benefites_item:not(:first-child)::after {
   content: '';
   display: block;
   height: 124px;
   width: 1px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--lightGreyColor);
   position: absolute;
   top: 60px;
   left: -70px;
-  /*    display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 22px; */
 }
 .benefites_img_wrapper {
   width: 62px;
   height: 62px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--lightGreyColor);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -300,19 +295,7 @@ address {
   margin-bottom: 37px;
   margin-left: 15px;
 }
-/* .benefites_icon::before {
-  content: '';
-  flex-shrink: 0;
-  display: block;
-  width: 62px;
-  height: 62px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 22px; 
-} */
+
 .benefites_title {
   color: var(--witeColor);
   font-weight: 600;
@@ -346,12 +329,16 @@ address {
   flex-wrap: wrap;
   gap: 19px;
   align-items: center;
+  overflow: hidden;
 }
 .ingredients_item {
+  position: relative;
   width: calc((100% - 3 * 19px) / 4);
   padding: 28px;
   border: 1px solid var(--accentColor);
   border-radius: 15px;
+  cursor: pointer;
+  transition: background-color, border-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ingredients_item:nth-child(1) {
   background-color: var(--accentColor);
@@ -370,6 +357,63 @@ address {
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
+}
+.ingredients_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--witeColor);
+  border-radius: 15px;
+  border: 1px solid var(--witeColor);
+  padding: 20px;
+}
+.ingredients_item:hover {
+  background-color: var(--witeColor);
+  border-color: var(--witeColor);
+}
+.ingredients_item:hover .ingredients_overlay {
+  transform: translateY(0);
+  background-color: var(--witeColor);
+  border-color: var(--witeColor);
+}
+.ingredients_overlay_title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.ingredients_overlay_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.ingredients_overlay_label {
+  padding: 6px 16px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  color: var(--witeColor);
+  background-color: var(--accentColor);
+  border-radius: 35px;
+  border: 1px solid transparent;
+}
+.ingredients_overlay_label.active {
+  background-color: var(--witeColor);
+  color: var(--black);
+  border-color: var(--accentColor);
+}
+.ingredients_overlay_desc {
+  line-height: 1.28;
+  color: var(--black);
 }
 
 /* HOW IT'S MADE */
@@ -469,7 +513,6 @@ address {
 .reviews_link {
   display: block;
   width: 222px;
-  /*  min-width: 222px; */
   font-weight: 600;
   font-size: 18px;
   line-height: 1.11;
@@ -479,6 +522,7 @@ address {
   padding: 14px 40px;
   border: 1px solid var(--accentColor);
   border-radius: 100px;
+  transition: background-color, color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reviews_link:hover,
 .reviews_link:focus {
@@ -548,7 +592,35 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer_link:hover {
   color: var(--accentColor);
+}
+
+/* MODAL */
+
+.backdrop {
+}
+.modal {
+  position: relative;
+}
+.modal_close_btn {
+  background-color: var(--witeColor);
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+.modal_close_icon {
+  stroke: var(--black);
+}
+.modal_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+.title_span {
 }
