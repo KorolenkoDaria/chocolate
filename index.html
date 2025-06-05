@@ -289,7 +289,7 @@
                         </p>
                     </li>
                 </ul>
-                <a class="reviews_link" href="./index.html">Leave a review</a>
+                <button class="reviews_btn" type="button" data-modal-open>Leave a review</button>
             </div>
         </section>
     </main>
@@ -325,9 +325,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop  is-hidden" data-modal>
         <div class="modal">
-            <button class="modal_close_btn">
+            <button class="modal_close_btn" data-modal-close>
                 <svg class="modal_close_icon" width="28" height="28">
                     <use href="./images/icons/icons_sprite.svg#close"></use>
                 </svg>
@@ -335,6 +335,8 @@
             <h3 class="modal_title">LEAVE A REVIEW ABOUT <span class="title_span">OUR CHOCOLATE</span></h3>
         </div>
     </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
