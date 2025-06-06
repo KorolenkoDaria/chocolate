@@ -100,24 +100,16 @@ address {
 }
 .header_logo_icon {
   margin-left: 4px;
-  /* animation: rotate 3s linear infinite both; */
+  animation: rotate 4s linear infinite both;
   transform-origin: center center;
 }
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(0deg);
+
+  to {
+    transform: rotate(360deg);
   }
 }
 .header_nav_list {
@@ -149,10 +141,12 @@ address {
 .header_social_icon {
   fill: none;
   stroke: var(--black);
-  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header_social_icon:hover {
   stroke: var(--accentColor);
+  transform: scale(1.1);
 }
 
 /* HERO */
