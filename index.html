@@ -338,6 +338,38 @@
                 </svg>
             </button>
             <h3 class="modal_title">LEAVE A REVIEW ABOUT <span class="title_span">OUR CHOCOLATE</span></h3>
+
+            <!--FORM-->>
+
+            <form name="review_form" class="modal_form" autocomplete="off">
+                <label for="" class="modal_form_field">
+                    Name
+                    <svg class="modal_form_icon" width="24" height="24">
+                        <use href="./images/icons/icons_sprite.svg#user"></use>
+                    </svg>
+                    <input type="text" placeholder="Name" name="review_form_name" class="modal_form_input">
+                </label>
+                <label for="" class="modal_form_field">
+                    Email
+                    <svg class="modal_form_icon" width="24" height="24">
+                        <use href="./images/icons/icons_sprite.svg#email"></use>
+                    </svg>
+                    <input type="email" placeholder="Email" name="review_form_email" class="modal_form_input">
+                </label>
+                <label for="" class="modal_form_field">
+                    Phone number
+                    <svg class="modal_form_icon" width="24" height="24">
+                        <use href="./images/icons/icons_sprite.svg#phone"></use>
+                    </svg>
+                    <input type="tel" placeholder="+38 (___) ___-__-__" name="review_form_tel" class="modal_form_input">
+                </label>
+                <label for="" class="modal_form_field">
+                    <textarea name="review_form_message" placeholder="Message" id=""></textarea>
+                </label>
+                <input type="checkbox" name="review_form_agree" id="review_form_agree" class="modal_form_agree">
+                <button type="submit">Submit</button>
+            </form>
+
         </div>
     </div>
 
