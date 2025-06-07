@@ -339,7 +339,7 @@
             </button>
             <h3 class="modal_title">LEAVE A REVIEW ABOUT <span class="title_span">OUR CHOCOLATE</span></h3>
 
-            <!--FORM-->>
+            <!--FORM-->
 
             <form name="review_form" class="modal_form" autocomplete="off">
                 <label for="" class="modal_form_field">
@@ -366,7 +366,11 @@
                 <label for="" class="modal_form_field">
                     <textarea name="review_form_message" placeholder="Message" id=""></textarea>
                 </label>
-                <input type="checkbox" name="review_form_agree" id="review_form_agree" class="modal_form_agree">
+                <div class="checkbox_wrapper">
+                    <input type="checkbox" name="review_form_agree" id="review_form_agree" class="modal_form_agree">
+                    <p class="privacy_text">I accept the terms and conditions of the <a href=""
+                            class="privacy_link">Privacy Policy</a></p>
+                </div>
                 <button type="submit">Submit</button>
             </form>
 

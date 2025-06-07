@@ -3,7 +3,7 @@
   --black: #111111;
   --mainBgColor: #fafafa;
   --secondBgColor: #1e1823;
-  --accentColor: #fd9222;
+  --accentColor: rgb(250, 134, 9);
   --greyColor: rgba(255, 255, 255, 0.7);
   --witeColor: #ffffff;
   --accenHoverColor: #fcf1e0;
@@ -667,10 +667,12 @@ address {
 }
 .modal_close_icon {
   stroke: var(--black);
-  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal_close_icon:hover {
   stroke: var(--accentColor);
+  transform: scale(1.1);
 }
 .modal_title {
   font-weight: 600;
@@ -683,12 +685,54 @@ address {
 /* FORM */
 
 .modal_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .modal_form_field {
 }
 .modal_form_icon {
+  stroke: #404040;
+  fill: var(--witeColor);
+
+  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal_form_input {
+  width: 437px;
+  height: 68px;
+  border-radius: 13px;
+  border: solid 1.5px rgba(17, 17, 17, 0.05);
+  /*   padding-left: 24px;
+  padding-right: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.checkbox_wrapper {
+  display: flex;
+  gap: 12px;
 }
 .modal_form_agree {
+}
+.privacy_text {
+  color: rgba(64, 64, 64, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.privacy_link {
+  color: var(--accentColor);
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
+  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.privacy_link:hover {
+  color: #f8a853;
 }
