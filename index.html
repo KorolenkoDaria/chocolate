@@ -342,30 +342,45 @@
             <!--FORM-->
 
             <form name="review_form" class="modal_form" autocomplete="off">
-                <label for="" class="modal_form_field">
-                    Name
+                <div class="modal_form_field">
+                    <label for="" class="modal_form_label">
+                        Name
+                    </label>
+                    <input type="text" name="review_form_name" class="modal_form_input">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#user"></use>
                     </svg>
-                    <input type="text" placeholder="Name" name="review_form_name" class="modal_form_input">
-                </label>
-                <label for="" class="modal_form_field">
-                    Email
+                </div>
+
+                <div class="modal_form_field">
+                    <label for="" class="modal_form_label">
+                        Email
+                    </label>
+                    <input type="email" name="review_form_email" class="modal_form_input">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#email"></use>
                     </svg>
-                    <input type="email" placeholder="Email" name="review_form_email" class="modal_form_input">
-                </label>
-                <label for="" class="modal_form_field">
-                    Phone number
+                </div>
+
+                <div class="modal_form_field">
+                    <label for="" class="modal_form_label">
+                        Phone number
+                    </label>
+                    <input type="tel" name="review_form_tel" class="modal_form_input">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#phone"></use>
                     </svg>
-                    <input type="tel" placeholder="+38 (___) ___-__-__" name="review_form_tel" class="modal_form_input">
-                </label>
-                <label for="" class="modal_form_field">
-                    <textarea name="review_form_message" placeholder="Message" id=""></textarea>
-                </label>
+                </div>
+
+                <div class="modal_form_field">
+                    <label for="" class="modal_form_label">
+                        Comment
+                    </label>
+                    <textarea name="review_form_message" placeholder="Enter text" rows="15"
+                        class="fmodal_form_textarea"></textarea>
+                </div>
+
+
                 <div class="checkbox_wrapper">
                     <input type="checkbox" name="review_form_agree" id="review_form_agree" class="modal_form_agree">
                     <p class="privacy_text">I accept the terms and conditions of the <a href=""
