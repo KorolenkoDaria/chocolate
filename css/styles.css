@@ -718,6 +718,7 @@ address {
   transform: scale(1.1);
 }
 .modal_title {
+  display: block;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.16;
@@ -731,7 +732,7 @@ address {
 .modal_form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
 }
 .modal_form_field {
   position: relative;
@@ -747,23 +748,33 @@ address {
   left: 24px;
   stroke: #404040;
   fill: var(--witeColor);
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
   /*  transition: stroke 400ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 400ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
-.fmodal_form_textarea {
+.modal_form_textarea {
   min-height: 137px;
-  padding-top: 22px;
-  padding-left: 24px;
+  padding: 22px 24px;
   width: 437px;
   border-radius: 13px;
   border: solid 1.5px rgba(17, 17, 17, 0.05);
+  resize: none;
+  font-size: 18px;
+  color: #404040;
 }
-::placeholder {
+.modal_form_textarea::placeholder {
   font-size: 18px;
   line-height: 1.28;
   letter-spacing: -0.02em;
-
   color: rgba(40, 40, 40, 0.3);
+}
+.modal_form_input::placeholder {
+  font-size: 18px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: rgba(40, 40, 40, 0.3);
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal_form_input {
@@ -772,19 +783,18 @@ address {
   border-radius: 13px;
   border: solid 1.5px rgba(17, 17, 17, 0.05);
   padding-left: 62px;
-  /*   padding-right: 24px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: var(--black);
-  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1); */
+  font-size: 18px;
+  color: #404040;
+  transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal_form_input:focus,
-.fmodal_form_textarea:focus {
+.modal_form_textarea:focus {
   border-color: var(--accentColor);
-  outline: none;
+  outline: transparent;
+}
+.modal_form_input:focus::placeholder {
+  opacity: 1;
 }
 
 .modal_form_input:focus + .modal_form_icon {
@@ -813,4 +823,7 @@ address {
 }
 .privacy_link:hover {
   color: #f8a853;
+}
+.modal_form_btn {
+  margin-top: 22px;
 }

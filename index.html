@@ -337,48 +337,48 @@
                     <use href="./images/icons/icons_sprite.svg#close"></use>
                 </svg>
             </button>
-            <h3 class="modal_title">LEAVE A REVIEW ABOUT <span class="title_span">OUR CHOCOLATE</span></h3>
+            <strong class="modal_title">LEAVE A REVIEW ABOUT <span class="title_span">OUR CHOCOLATE</span></strong>
 
             <!--FORM-->
 
             <form name="review_form" class="modal_form" autocomplete="off">
-                <div class="modal_form_field">
-                    <label for="" class="modal_form_label">
-                        Name
-                    </label>
-                    <input type="text" name="review_form_name" class="modal_form_input">
+
+
+                <label for="username" class="modal_form_field">
+                    <span class="modal_form_label">Name</span>
+                    <input id="username" type="text" name="review_form_name" class="modal_form_input"
+                        placeholder="Enter your name">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#user"></use>
                     </svg>
-                </div>
+                </label>
 
-                <div class="modal_form_field">
-                    <label for="" class="modal_form_label">
-                        Email
-                    </label>
-                    <input type="email" name="review_form_email" class="modal_form_input">
+
+                <label for="useremail" class="modal_form_field">
+                    <span class="modal_form_label">Email</span>
+                    <input id="useremail" type="email" name="review_form_email" class="modal_form_input"
+                        placeholder="example@gmail.com">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#email"></use>
                     </svg>
-                </div>
+                </label>
 
-                <div class="modal_form_field">
-                    <label for="" class="modal_form_label">
-                        Phone number
-                    </label>
-                    <input type="tel" name="review_form_tel" class="modal_form_input">
+
+                <label for="userphone" class="modal_form_field">
+                    <span class="modal_form_label">Phone number</span>
+                    <input id="userphone" type="tel" name="review_form_tel" class="modal_form_input"
+                        placeholder="+38 (000) 000-00-00">
                     <svg class="modal_form_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#phone"></use>
                     </svg>
-                </div>
+                </label>
 
-                <div class="modal_form_field">
-                    <label for="" class="modal_form_label">
-                        Comment
-                    </label>
-                    <textarea name="review_form_message" placeholder="Enter text" rows="5"
-                        class="fmodal_form_textarea"></textarea>
-                </div>
+
+                <label for="usercomment" class="modal_form_field">
+                    <span class="modal_form_label">Comment</span>
+                    <textarea id="usercomment" name="review_form_message" placeholder="Enter text" rows="5"
+                        class="modal_form_textarea"></textarea>
+                </label>
 
 
                 <div class="checkbox_wrapper">
@@ -386,7 +386,9 @@
                     <p class="privacy_text">I accept the terms and conditions of the <a href=""
                             class="privacy_link">Privacy Policy</a></p>
                 </div>
-                <button type="submit">Submit</button>
+
+                <button class="modal_form_btn" type="submit">Submit</button>
+
             </form>
 
         </div>
