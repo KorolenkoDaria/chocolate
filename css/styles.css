@@ -652,6 +652,7 @@ address {
 }
 .footer_form_input:focus {
   outline: none;
+  border-color: var(--accentColor);
 }
 .footer_form_input::placeholder {
   font-weight: 400;
@@ -849,6 +850,7 @@ address {
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.02em;
+  user-select: none;
 }
 
 .privacy_link {
