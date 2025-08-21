@@ -90,9 +90,9 @@ address {
     padding-right: 32px;
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .container {
-    width: 1168px;
+    max-width: 1200px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -183,8 +183,7 @@ address {
   margin-bottom: 72px;
 }
 .hero_bg {
-  padding: 381px 40px 40px 40px;
-
+  padding: 395px 20px 20px 20px;
   background-color: var(--secondBgColor);
   background-image: url('../images/hero/hero_m_bg_1x.jpg');
   background-repeat: no-repeat;
@@ -200,6 +199,7 @@ address {
 @media screen and (min-width: 768px) {
   .hero_bg {
     background-image: url('../images/hero/hero_t_bg_1x.jpg');
+    padding: 627px 40px 40px 40px;
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero_bg {
@@ -207,7 +207,7 @@ address {
     }
   }
 }
-@media screen and (min-width: 1168px) {
+@media screen and (min-width: 1200px) {
   .hero_bg {
     padding: 381px 40px 40px 40px;
     background-image: url('../images/hero/hero_d_bg_1x.jpg');
@@ -222,30 +222,53 @@ address {
 .hero_title {
 }
 .hero_text {
-  width: 484px;
+  width: 299px;
   color: var(--witeColor);
   font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   margin-bottom: 32px;
 }
+@media screen and (min-width: 768px) {
+  .hero_text {
+    width: 484px;
+    font-size: 28px;
+    line-height: 1.21;
+  }
+}
+.hero_text span {
+  font-weight: 700;
+}
 .hero_btn_wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .hero_btn_wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .hero_links_list {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .hero_links_list {
+    margin-bottom: 0px;
+  }
 }
 .hero_item {
 }
+
 .hero_btn {
   display: inline-flex;
-  padding: 14px 40px;
-  min-width: 144px;
-  min-height: 45px;
+  padding: 12px 28px;
+  min-width: 120px;
+  min-height: 41px;
   border: 1px solid #000000;
   border-radius: 100px;
   cursor: pointer;
@@ -255,21 +278,38 @@ address {
   transition-property: color, background-color;
   transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .hero_btn {
+    min-width: 144px;
+    min-height: 45px;
+    padding: 14px 40px;
+  }
+}
+
 .hero_btn:hover {
   background-color: var(--accenHoverColor);
   color: var(--accentColor);
 }
 .hero_link {
+  padding: 12px 28px;
+  min-width: 159px;
+  min-height: 41px;
   display: inline-flex;
-  min-width: 183px;
-  min-height: 45px;
-  padding: 13px 39px;
+  /* min-width: 183px;
+  min-height: 45px; */
+  /*   padding: 13px 39px; */
   border-radius: 100px;
   border: 1px solid var(--witeColor);
   color: var(--witeColor);
   font-weight: 600;
   transition-property: color, background-color, border-color;
   transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .hero_link {
+    min-width: 183px;
+    padding: 14px 40px;
+  }
 }
 .hero_link:hover {
   background-color: var(--witeColor);
@@ -279,12 +319,16 @@ address {
 .hero_scroll {
   display: flex;
   align-items: center;
+  font-size: 12px;
   color: var(--witeColor);
-  font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-weight: 500;
   background-color: unset;
-  transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*   transition: color 400ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+@media screen and (min-width: 768px) {
+  .hero_scroll {
+    font-size: 14px;
+  }
 }
 .hero_scroll:hover {
   color: var(--accentColor);
@@ -293,12 +337,12 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-left: 14px;
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
   border-radius: 50%;
   background-color: var(--witeColor);
-  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*  transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .hero_scroll:hover .hero_circle {
   background-color: var(--accentColor);
