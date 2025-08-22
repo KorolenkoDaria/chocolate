@@ -23,13 +23,22 @@
 <body>
     <!--header-->
 
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header_container">
             <nav class="header_nav">
                 <a class="header_logo" href="./index.html"><span class="header_logo_italic">SIMPLY</span> CHOCOLATE
                     <svg class="header_logo_icon" width="24" height="24">
                         <use href="./images/icons/icons_sprite.svg#logo"></use>
                     </svg></a>
+
+                <!-- mobile menu button -->
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="header-burger-icon" width="24" height="24" fill="red" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/icons/icons_sprite.svg#burger-menu"></use>
+                    </svg>
+                </button>
+                <!-- _________________ -->
 
                 <ul class="header_nav_list">
                     <li class="header_nav_item"><a class="header_nav_link" href="./index.html">Home</a></li>
@@ -50,35 +59,37 @@
                 </li>
             </ul>
         </div>
-    </header> -->
+    </header>
 
     <!--main -->
     <main>
         <!--hero-->
         <section class="section hero">
-            <div class="container  hero_bg">
-                <h1 class="hero_title" hidden>SIMPLY CHOCOLATE</h1>
-                <p class="hero_text">Treat yourself or a loved one to
-                    our finest ingredients for a moment
-                    of pure delight!</p>
-                <div class="hero_btn_wrapper">
-                    <ul class="hero_links_list">
-                        <li class="hero_links_item"><a class="hero_btn">Buy now</a></li>
-                        <li class="hero_links_item"><a href="#how" class="hero_link">How it’s made</a></li>
-                    </ul>
-                    <button class="hero_scroll" href="#contact">scroll down
-                        <span class="hero_circle">
-                            <svg class="hero_icon" width="22" height="22">
-                                <use href="./images/icons/icons_sprite.svg#arrow"></use>
-                            </svg>
-                        </span>
-                    </button>
+            <div class="container ">
+                <div class="hero_bg">
+                    <h1 class="hero_title" hidden>SIMPLY CHOCOLATE</h1>
+                    <p class="hero_text">Treat yourself or a loved one to
+                        our finest ingredients for a moment
+                        of pure delight!</p>
+                    <div class="hero_btn_wrapper">
+                        <ul class="hero_links_list">
+                            <li class="hero_links_item"><a class="hero_btn">Buy now</a></li>
+                            <li class="hero_links_item"><a href="#how" class="hero_link">How it’s made</a></li>
+                        </ul>
+                        <button class="hero_scroll" href="#contact">scroll down
+                            <span class="hero_circle">
+                                <svg class="hero_icon" width="22" height="22">
+                                    <use href="./images/icons/icons_sprite.svg#arrow"></use>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!--benefites-->
-        <!--  <section class="section benefites">
+        <section class="section benefites">
             <div class="container">
                 <ul class="benefites_list">
                     <li class="benefites_item">
@@ -129,7 +140,7 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
 
         <!--ingredients-->
         <!-- <section class="section ingredients">
