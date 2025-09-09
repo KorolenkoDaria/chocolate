@@ -890,16 +890,17 @@ address {
   .reviews_item:last-child {
     display: none;
   }
-
   .reviews_item {
     width: calc((100% - 16px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  /*   .reviews_item:last-child {
+  .reviews_item:last-child {
     display: flex;
-    width: calc((100% - 28px * 2) / 3);
-  } */
+  }
+  .reviews_item {
+    width: calc((100% - 2 * 28px) / 3);
+  }
 }
 @media screen and (min-width: 768px) {
   .reviews_item {
