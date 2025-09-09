@@ -76,7 +76,6 @@ address {
 }
 
 .container {
-  outline: red solid 1px;
   min-width: 320px;
   max-width: 375px;
   margin: 0 auto;
