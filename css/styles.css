@@ -460,8 +460,6 @@ address {
   border: 1px solid var(--lightGreyColor);
   border-radius: 50%;
   position: absolute;
-  /*   top: -15px; */
-  top: 0;
 }
 @media screen and (min-width: 768px) {
   .benefites_item {
