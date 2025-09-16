@@ -1453,12 +1453,13 @@ address {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 136px 20px 20px 20px;
   background-color: var(--secondBgColor);
   z-index: 999;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -1476,7 +1477,7 @@ address {
 .mobile-menu {
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: auto;
+  /*   margin-bottom: auto; */
 }
 
 .mobile-menu-link {
